@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="stop-flickering" version="0.0.1">
+
+	<name>stop-flickering</name>
+
+	<description>This plugin is used to manipulate the AndroidManifest.xml</description>
+
+	<license>MIT</license>
+
+	<engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+  <!-- android -->
+  <platform name="android">	
+	<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity" xmlns:android="http://schemas.android.com/apk/res/android">
+		<activity android:theme="@android:style/Theme.Black" />
+	</edit-config>
+  </platform>
+</plugin>
